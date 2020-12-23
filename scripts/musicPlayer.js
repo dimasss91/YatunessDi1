@@ -21,6 +21,10 @@ export const musicPlayerInit = () => {
    const audioTimeTotal = document.querySelector('.audio-time__total');
 
       // const audioButtonStop = document.querySelector('.audio-button__stop');
+      
+      const audio = new Audio();
+      audio.type = 'audio/mp3';
+
 
       const toggleIcon = () => {
          if (audioPlayer.paused) {

@@ -12,6 +12,7 @@ export const videoPlayerInit = () => {
    const videoProgress = document.querySelector('.video-progress');
    const videoTimePassed = document.querySelector('.video-time__passed');
    const videoTimeTotal = document.querySelector('.video-time__total');
+   const videoVolume = document.querySelector('.video-volume');
 
    const toggleIcon = () => {
       if (videoPlayer.paused) {
@@ -38,7 +39,7 @@ export const videoPlayerInit = () => {
       videoPlayer.currentTime = 0;
    }
 
-      const addZero = n => n < 10 ? '0'+ n : n;
+   const addZero = n => n < 10 ? '0'+ n : n;
 
    videoPlayer.addEventListener('click', togglePlay);
    videoButtonPlay.addEventListener('click', togglePlay);
@@ -72,6 +73,11 @@ export const videoPlayerInit = () => {
       const value = videoProgress.value;
 
       videoPlayer.currentTime = (value * duration) / 100;
+   });
+
+   videoVolume.addEventListener('input', () => {
+      videoPlayer.volume = videoVolume.value / 100;
+      // настройка зваука
    });
 
 };
