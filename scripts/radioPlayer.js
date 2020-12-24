@@ -9,7 +9,6 @@ export const radioPlayerInit = () => {
    const radioStop = document.querySelector('.radio-stop');
    const radioVolume = document.querySelector('.radio-volume');
 
-
    const audio = new Audio();
    audio.type = 'audio/aac';
 
@@ -20,7 +19,7 @@ export const radioPlayerInit = () => {
          radio.classList.remove('play');
          radioStop.classList.add('fa-play');
          radioStop.classList.remove('fa-stop');
-         
+
       } else {
          radio.classList.add('play');
          radioStop.classList.add('fa-stop');
@@ -72,8 +71,6 @@ export const radioPlayerInit = () => {
       audio.volume = radioVolume.value / 100;
       // настройка зваука
    });
-
-
 };
 
 
