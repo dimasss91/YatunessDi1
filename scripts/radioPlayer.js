@@ -60,7 +60,7 @@ export const radioPlayerInit = () => {
    // переключать мужду радио (1 раз на станцию, пока не переключишь)
 
    radioStop.addEventListener('click', () => {
-      if (audio.pauser) {
+      if (audio.paused) {
          audio.play();
       } else {
          audio.pause();
